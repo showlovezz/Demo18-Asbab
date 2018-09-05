@@ -1,8 +1,35 @@
+// 手機、平板以下 平板的直向和橫向都能用
 @media screen and (max-width: 767px) {
 	.header_top_right {
-		> .header_user_info {
-			font-size: 120px;
-			text-align: center;
+		font-size: 12px;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.navbar-nav {
+		background-color: $dim_gray;
+		> .nav-item {
+			> .nav-link {
+				color: $basic_white;
+			}
+		}
+	}
+}
+
+// 桌機、平板以上
+@media screen and (min-width: 992px) {
+	.header_top_right {
+		text-align: right;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.navbar-nav {
+		> .nav-item {
+			> .nav-link {
+				color: $dim_gray;
+			}
 		}
 	}
 }

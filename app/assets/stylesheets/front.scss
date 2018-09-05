@@ -115,4 +115,92 @@
   	color: $dim_gray;
   }
 }
+
+.carousel-item {
+	> img {
+		height: 600px;
+	}
+}
 // 輪播區域結束
+
+// 商品旗幟開始開始
+.categorybanner {
+	.col-md-4 {
+		padding: 0;
+		> .dark_bg {
+			> h5 {
+				color: $basic_white;
+				font-size: 16px;
+				text-transform: uppercase;
+				font-weight: 600;
+				line-height: 1.1;
+			}
+			> h3 {
+				color: $basic_white;
+				font-size: 22px;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+		}
+	}
+	.categorybanner_item {
+		position: relative;
+    overflow: hidden;
+	}
+}
+
+.categorybanner {
+	.categorybanner_item {
+		> .categorybanner_title {
+			transform: translateY(-50%);
+	    -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	    -o-transform: translateY(-50%);
+	    -webkit-transform: translateY(-50%);
+	    position: absolute;
+	    top: 50%;
+	    right: 5%;
+	    z-index: 2;
+		}
+		> .categorybanner_title.text-left {
+			left: 5%;
+			> h5 {
+				font-size: 16px;
+				text-transform: uppercase;
+				font-weight: 600;
+				line-height: 1.1;
+			}
+			> h3 {
+				font-size: 22px;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+.categorybanner {
+	.categorybanner_item {
+		> .categorybanner_image:before {
+			background-color: rgba(0, 0, 0, 0.5);
+	    content: "";
+	    height: 100%;
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	    transform: scale(0);
+	    transition: all 0.5s ease 0s;
+	    -o-transition: all 0.5s ease 0s;
+	    -moz-transition: all 0.5s ease 0s;
+	    -webkit-transition: all 0.5s ease 0s;
+	    width: 100%;
+	    z-index: 1;
+		}
+	}
+	.categorybanner_item:hover {
+		> .categorybanner_image:before {
+			transform: scale(1);
+		}
+	}
+}
+// 商品旗幟結束

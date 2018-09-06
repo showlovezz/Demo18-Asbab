@@ -38,6 +38,14 @@
 	}
 }
 
+@media screen and (max-width: 767px) {
+	.homepost-wraper {
+		.card-footer {
+			text-align: center;
+		}
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.mb_sm_30 {
 		margin-bottom: 30px;

@@ -470,3 +470,102 @@
 	}
 }
 // 關於網站結束
+
+// 網站文章區域開始
+.homepost_wraper {
+	.card-body {
+		> h5 {
+			font-size: 18px;	
+		}
+		> p {
+			color: $basic_gray;
+		}
+		> p+p {
+			margin-bottom: 0;
+			> a {
+				color: $dim_gray;
+			}
+		}
+	}
+}
+
+.homepost_wraper {
+	.card {
+		> .card-body {
+			> h5 {
+				font-size: 18px;
+			}
+			> p {
+			color: $basic_gray;
+			}
+			> p+p {
+			margin-bottom: 0;
+			> a {
+				color: $dim_gray;
+				}
+			}
+		}
+	}
+}
+
+.homepost_wraper {
+	.card-footer {
+		> .post_author {
+			color: $basic_gray;
+			> i {
+				margin-right: 5px;
+			}
+			> b {
+				color: $dim_gray;
+			}
+		}
+		> .post_comment {
+			margin-left: 20px;
+			> i {
+				color: $basic_gray;
+			}
+		}
+	}
+}
+
+.card_homepost {
+	.homepost_image:before {
+		background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    width: 100%;
+    z-index: 1;
+	}
+}
+
+.card_homepost:hover {
+	.homepost_image:before {
+		transform: scale(1);
+	}
+	img {
+		-webkit-transform: scale(1.09);
+    -moz-transform: scale(1.09);
+    -o-transform: scale(1.09);
+    -ms-transform: scale(1.09);
+    transform: scale(1.09);
+	}
+}
+
+.homepost_image {
+	position: relative;
+  overflow: hidden;
+	img {
+		-webkit-transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+    -moz-transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+    transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+	}
+}
+// 網站文章區域結束

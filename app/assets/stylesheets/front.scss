@@ -399,10 +399,74 @@
 		font-size: 14px;
 		> del {
 			margin-right: 10px;
-			color: #777;
+			color: $basic_gray;
 			font-style: italic;
 			font-size: 16px;
 		}
 	}
 }
 // 特色商品區域結束
+
+// 關於網站開始
+.homeabout {
+	background-image: url("http://magicclubgroup.com/bapor/img/bg/bg_1.jpg");
+  background-position: center center;
+  .bg_white {
+  	background-color: $basic_white;
+  }
+  .p_40 {
+  	padding: 40px;
+  }
+}
+
+.parallex_image {
+	background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homeabout_wrapper {
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  > .homeabout_image {
+  	margin-bottom: 30px;
+  }
+}
+
+.homeabout_wrapper {
+	> h6.homeabout_title {
+		font-size: 14px;
+	  text-transform: uppercase;
+	  font-weight: 600;
+	  margin-top: 0px;
+	  margin-bottom: 15px;
+	}
+	> p {
+		margin-bottom: 30px;
+    margin-top:5px; 
+    font-style: italic;
+    font-weight: 100;
+    line-height: 28px;
+    color: $basic_gray;
+    font-size: 18px;
+    > .color {
+    	color: $basic_orange;
+    }
+	}
+}
+
+.homeabout_wrapper {
+	> .title_btn2 {
+		font-size: 12px;
+  	color: $basic_white;
+  	background-color: $dim_green;
+  	padding: 15px 35px;
+  	display: inline-block;
+  	font-weight: 600;
+	}
+	> .title_btn2:hover {
+		background-color: $basic_orange;
+  	color: $dim_gray;
+	}
+}
+// 關於網站結束

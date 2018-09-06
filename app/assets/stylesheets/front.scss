@@ -271,10 +271,6 @@
 // 促銷區域結束
 
 // 促銷旗幟區域開始
-.section_padding_bottom {
-  padding-bottom: 80px;
-}
-
 .section_heading {
   position: relative;
   margin-bottom: 30px;
@@ -330,3 +326,23 @@
 	}
 }
 // 促銷旗幟區域結束
+
+// 節日、季節促銷區域開始
+.festival_seasons_inner {
+  background-color: #333;
+  padding: 20px 40px;
+  > h3 {
+  	margin-bottom: 0;
+	  color: $basic_white;
+	  font-weight: 300;
+	  font-size: 22px;
+	  text-transform: uppercase;
+	  > a {
+	  	color: $basic_white;
+	  }
+	  > a:hover {
+	  	color: $basic_pink;
+	  }
+  }
+}
+// 節日、季節促銷區域結束

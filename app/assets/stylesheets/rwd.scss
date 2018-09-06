@@ -30,6 +30,14 @@
 	}
 }
 
+@media screen and (max-width: 767px) {
+	.festival_seasons_inner {
+		> h3 {
+			font-size: 18px;
+		}
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.mb_sm_30 {
 		margin-bottom: 30px;

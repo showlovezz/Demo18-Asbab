@@ -9,3 +9,11 @@ a {
 a:hover {
 	text-decoration: none;
 }
+
+.section_padding_bottom {
+  padding-bottom: 80px;
+}
+
+.overlay_dark50:before {
+  background-color: rgba(0, 0, 0, 0.50);
+}

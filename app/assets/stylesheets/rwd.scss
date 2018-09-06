@@ -24,6 +24,12 @@
 	}
 }
 
+@media screen and (max-width: 767px) {
+	.section_padding_bottom {
+    padding-bottom: 50px;
+	}
+}
+
 @media screen and (max-width: 991px) {
 	.mb_sm_30 {
 		margin-bottom: 30px;

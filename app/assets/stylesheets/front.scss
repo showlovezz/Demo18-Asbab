@@ -346,3 +346,63 @@
   }
 }
 // 節日、季節促銷區域結束
+
+// 特色商品區域開始
+.section_heading {
+	position: relative;
+  margin-bottom: 30px;
+  > h2 {
+  	margin-bottom: 30px;
+  	font-size: 28px;
+  	text-transform: uppercase;
+  	font-weight: 600;
+  	margin-top: 0px;
+  	line-height: 1.1;		
+  }
+  > p {
+  	max-width: 650px;
+    display: inline-block;
+    font-style: italic;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 14px;
+    color: $dim_red;
+  }
+}
+
+.active {
+	color: $basic_pink!important;
+}
+
+.product_category {
+	text-transform: uppercase;
+	margin: 0 auto 30px 0;
+	padding: 0;
+	> .nav-item {
+		> .nav-link {
+			color: $dim_gray;
+		}
+	}
+}
+
+.product_item {
+	> .product_item_wraper {
+		margin-bottom: 15px;
+	}
+}
+
+.product_item_detail {
+	> h6 {
+		margin-bottom: 0;
+		color: $basic_orange;
+		font-size: 14px;
+		> del {
+			margin-right: 10px;
+			color: #777;
+			font-style: italic;
+			font-size: 16px;
+		}
+	}
+}
+// 特色商品區域結束

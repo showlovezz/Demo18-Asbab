@@ -7,7 +7,7 @@ body {
 
 // 按鈕顏色變化設定
 a {
-	transition: all 0.5s ease 0s;
+	transition: all 1s ease 0s;
 }
 
 // 取消超連結底線
@@ -18,6 +18,54 @@ a:hover {
 // p 字體厚度
 p {
 	font-weight: 400;
+}
+
+// h標籤全部大寫
+h1,h2,h3,h4,h5,h6 {
+	text-transform: uppercase;
+}
+
+// 各字體大小
+h1 {
+	font-size: 50px;
+	font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 0px;
+  margin-bottom: 15px;
 }
 
 .section_padding_bottom {

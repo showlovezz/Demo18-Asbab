@@ -58,77 +58,53 @@ header {
 // 導覽區域結束
 
 // 輪播區域開始
-.carousel_caption1 {
-	position: absolute;
-	top: 25%;
-	right: 15%;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: $basic_white;
-  text-transform: uppercase;
-  > .maintitle {
-  	font-size: 60px;
-  	margin-bottom: 0;
-  } 
-  > .subtitle {
-  	margin-top: 30px;
-  	margin-bottom: 40px;
-    font-weight: 400;
-    font-size: 22px;
-  }
-  > .title_btn1 {
-  	font-size: 12px;
-  	color: $dim_gray;
-  	background-color: $basic_white;
-  	padding: 15px 35px;
-  	display: inline-block;
-  	font-weight: 600;
-  }
-  > .title_btn1:hover {
-  	background-color: $light_blue;
-  	color: $basic_white;
-  }
+div {
+	.carousel_caption {
+		position: absolute;
+		top: 25%;
+		right: 15%;
+	  left: 15%;
+	  z-index: 10;
+	  padding-top: 20px;
+	  padding-bottom: 20px;
+	  color: $basic_white;
+	  > h3 {
+	  	margin-top: 30px;
+	  }
+	  > .title_btn1 {
+	  	text-transform: uppercase;
+	  	font-size: 12px;
+	  	padding: 15px 35px;
+	  	background-color: $basic_white;
+	  	display: inline-block;
+	  	color: $dim_gray;
+	  	margin-top: 30px;
+	  }
+	  > .title_btn1:hover {
+	  	background-color: $basic_pink;
+	  	color: $basic_white;
+	  }
+	  .title_btn2 {
+	  	text-transform: uppercase;
+	  	font-size: 12px;
+	  	padding: 15px 35px;
+	  	background-color: $basic_pink;
+	  	display: inline-block;
+	  	color: $basic_white;
+	  	margin-top: 30px;
+	  }
+	  > .title_btn2:hover {
+	  	background-color: $basic_white;
+	  	color: $dim_gray;
+	  }
+	}
 }
 
-.carousel_caption2 {
-	position: absolute;
-	top: 25%;
-	right: 15%;
-  left: 15%;
-  z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: $basic_white;
-  text-transform: uppercase;
-  > .maintitle {
-  	font-size: 60px;
-  	margin-bottom: 0;
-  } 
-  > .subtitle {
-  	margin-top: 30px;
-  	margin-bottom: 40px;
-    font-weight: 400;
-    font-size: 22px;
-  }
-  > .title_btn2 {
-  	font-size: 12px;
-  	color: $basic_white;
-  	background-color: $dim_green;
-  	padding: 15px 35px;
-  	display: inline-block;
-  	font-weight: 600;
-  }
-  > .title_btn2:hover {
-  	background-color: $basic_orange;
-  	color: $dim_gray;
-  }
-}
-
-.carousel-item {
-	> img {
-		height: 600px;
+div {
+	.carousel-item {
+		> img {
+			height: 550px;
+		}
 	}
 }
 // 輪播區域結束

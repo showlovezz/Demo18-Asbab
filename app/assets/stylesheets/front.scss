@@ -1,50 +1,60 @@
 // 導覽區域開始
-// 導覽列上半部開始
-.header_top {
-	padding: 10px 0;
-	border-bottom: 1px solid $dim_silver;
-}
-
-.header_top_left {
-	> p {
-		margin-bottom: 0;
-		color: $dim_gray;
-		> b {
-			color: $basic_pink;
-		}
+header {
+	> .header_top {
+		padding: 10px 0;
+		border-bottom: 1px solid $dim_silver;
 	}
 }
 
-.header_top_right {
-	> a {
-		border-left: 1px solid $light_blue;
-		padding-left: 10px;
-		padding-right: 10px;
-		color: $dim_gray;
-		> i {
-			margin-right: 2px;
-		}
-	}
-	> a:hover {
-		color: $basic_pink;
-	}
-}
-// 導覽列上半部結束
-// 導覽列主選單開始
-.navbar-nav {
-	> .nav-item {
-		> .nav-link {
-			padding-left: 20px;
-			padding-right: 20px;
-			font-size: 15px;
-			text-transform: uppercase;
-		}
-		> .nav-link:hover {
-			color: $basic_pink;
+header {
+	.header_top {
+		.header_top_left {
+			> p {
+				margin-bottom: 0;
+				> b {
+					color: $basic_pink;
+				}
+			}
 		}
 	}
 }
-// 導覽列主選單結束
+
+header {
+	.header_top {
+		.header_top_right {
+			> a {
+				border-left: 1px solid $light_blue;
+				padding-left: 10px;
+				padding-right: 10px;
+				color: $dim_gray;
+				> i {
+					margin-right: 2px;
+				}
+			}
+			> a:hover {
+				color: $basic_pink;
+			}
+		}
+	}
+}
+
+header {
+	.header_main {
+		ul.navbar-nav {
+			> li {
+				> .nav_link_page {
+					padding-left: 20px;
+					padding-right: 20px;
+					font-size: 15px;
+					text-transform: uppercase;
+				}
+				> .nav_link_page:hover {
+					color: $basic_pink;
+				}
+			}
+		}
+	}
+}
 // 導覽區域結束
 
 // 輪播區域開始

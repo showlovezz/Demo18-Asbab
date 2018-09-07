@@ -1,14 +1,23 @@
+// 整個版面設定
 body {
 	font-size: 14px;
+	color: $dim_gray;
 	font-family: 'Open Sans', sans-serif;
 }
 
+// 按鈕顏色變化設定
 a {
 	transition: all 0.5s ease 0s;
 }
 
+// 取消超連結底線
 a:hover {
 	text-decoration: none;
+}
+
+// p 字體厚度
+p {
+	font-weight: 400;
 }
 
 .section_padding_bottom {

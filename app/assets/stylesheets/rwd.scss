@@ -1,5 +1,6 @@
 // 手機、平板以下 平板的直向和橫向都能用
 @media screen and (max-width: 767px) {
+	// 導覽列右半部
 	.header_top_right {
 		font-size: 12px;
 		text-align: center;
@@ -7,10 +8,11 @@
 }
 
 @media screen and (max-width: 767px) {
-	.navbar-nav {
+	// 導覽列背景顏色及字體顏色
+	.rwd_ul_bg {
 		background-color: $dim_gray;
 		> .nav-item {
-			> .nav-link {
+			> .nav_link_page {
 				color: $basic_white;
 			}
 		}

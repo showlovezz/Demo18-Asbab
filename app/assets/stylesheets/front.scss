@@ -575,3 +575,113 @@
 	background-color: $dim_silver;
 }
 // 網站logo結束
+
+// 頁腳區域開始
+.footer-dark-bg {
+  background-color: #222;
+}
+
+.pt-80 {
+  padding-top: 80px;
+}
+
+.footer-block h6 {
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer-block p {
+	color: $footer_gray;
+	font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.information-block, .usefull-block {
+	> ul {
+		list-style: none;
+    margin-left: 0;
+		padding-left: 0;
+		margin-bottom: 10px;
+		> li {
+			margin-bottom: 8px;
+			a {
+				color: $footer_gray;
+			}
+			a:hover {
+				color: $basic_orange;
+			}
+		}
+	}
+}
+
+.footer-block.contactus-block p {
+  padding-left: 20px;
+  position: relative;
+}
+
+.footer-dark-bg p, .footer-dark-bg a {
+  color: #acacac;
+}
+
+p {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-block.contactus-block p i {
+  position: absolute;
+  left: 0;
+  line-height: inherit;
+}
+
+br {
+  font-size: 0;
+  line-height: 0;
+}
+
+.footer-block a:hover {
+  color: $basic_orange;
+}
+
+.footer-middle {
+  margin: 0px auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.footer-bottom {
+  background: #252525;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  line-height: 40px;
+}
+
+.copyright  {
+	margin-bottom: 0;
+	a {
+		color: $basic_orange;
+	}
+}
+
+.social-link {
+	ul {
+		list-style: none;
+		li {
+			width: 40px;
+			height: 40px;
+			background-color: #222;
+			margin-right: 10px;
+			text-align: center;
+		}
+		li:hover {
+			background-color: $dim_silver;
+		}
+	}
+}
+
+// 頁腳區域結束

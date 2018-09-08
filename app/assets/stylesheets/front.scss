@@ -238,39 +238,40 @@ section.promo {
 // 促銷區域結束
 
 // 促銷旗幟區域開始
-.section_heading {
-  position: relative;
-  margin-bottom: 30px;
-  > h2 {
-  	margin-bottom: 30px;
-  	font-size: 28px;
-  	text-transform: uppercase;
-  	font-weight: 600;
-  	line-height: 1.1;
-  }
-  > p {
-  	max-width: 650px;
-    display: inline-block;
-    font-style: italic;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 400;
-    font-size: 14px;
-    color: $dim_red;
-  }
+section.promo_banner {
+	.section_heading {
+		position: relative;
+		margin-bottom: 30px;
+		> h2 {
+			margin-bottom: 30px;
+			line-height: 1.1;
+		}
+		> p {
+			max-width: 650px;
+	    display: inline-block;
+	    font-style: italic;
+	    margin-top: 0;
+	    margin-bottom: 0;
+	    color: $basic_gray;
+		}
+	}
 }
 
-.promo_banner {
+section.promo_banner {
 	.promo_banner_wraper {
 		position: relative;
     overflow: hidden;
 	}
 }
 
-.promo_banner {
+section.promo_banner {
 	.mb_30 {
 		margin-bottom: 30px;
 	}
+}
+
+
+section.promo_banner {
 	.promo_banner_wraper {
 		> a {
 			> img {
@@ -334,7 +335,7 @@ section.promo {
     margin-top: 0;
     font-weight: 400;
     font-size: 14px;
-    color: $dim_red;
+    // color: $dim_red;
   }
 }
 

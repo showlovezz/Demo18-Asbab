@@ -20,6 +20,14 @@
 }
 
 @media screen and (max-width: 767px) {
+	// 向下外距
+	.mb_sm_30 {
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	// 上下內距
 	.section_padding {
 		padding-top: 50px;
 		padding-bottom: 50px;
@@ -48,22 +56,19 @@
 	}
 }
 
-@media screen and (max-width: 991px) {
-	.mb_sm_30 {
-		margin-bottom: 30px;
-	}
-}
 // 桌機、平板以上
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
+	// 我的帳號區域置右
 	.header_top_right {
 		text-align: right;
 	}
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
+	// 導覽列背景顏色
 	.navbar-nav {
 		> .nav-item {
-			> .nav-link {
+			> .nav_link_page {
 				color: $dim_gray;
 			}
 		}

@@ -180,21 +180,18 @@ section.categorybanner {
 // 商品旗幟結束
 
 // 促銷區域開始
-.section_padding {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.promo_box {    
-    padding: 0px;
+section.promo {
+	.promo_box {
+		padding: 0px;
     position: relative;
     > .promo_item {
     	text-align: center;
     }
+	}
 }
 
-.promo_box {
-	.promo_item {
+section.promo {
+	.promo_item_inner {
 		.promo_icon {
 			display: inline-table;
 	    vertical-align: middle;
@@ -212,8 +209,8 @@ section.categorybanner {
 	}
 }
 
-.promo_box {
-	.promo_item {
+section.promo {
+	.promo_item_inner {
 		.promo_info {
 			padding-left: 15px;
 	    text-align: left;
@@ -224,21 +221,17 @@ section.categorybanner {
 	}
 }
 
-.promo_box {
-	.promo_item {
-		h6 {
+section.promo {
+	.promo_info {
+		> h6 {
 			margin-bottom: 0;
-			font-size: 14px;
-			text-transform: uppercase;
-			font-weight: 600;
 			line-height: 1.1;
 		}
-		.italic {
+		> p {
+			padding: 3px 0;
 			margin-bottom: 0;
 			font-style: italic;
-			font-weight: 400;
-		  font-size: 14px;
-		  color: $dim_red;
+			color: $basic_gray;
 		}
 	}
 }

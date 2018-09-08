@@ -110,32 +110,7 @@ div {
 // 輪播區域結束
 
 // 商品旗幟開始開始
-.categorybanner {
-	.col-md-4 {
-		padding: 0;
-		> .dark_bg {
-			> h5 {
-				color: $basic_white;
-				font-size: 16px;
-				text-transform: uppercase;
-				font-weight: 600;
-				line-height: 1.1;
-			}
-			> h3 {
-				color: $basic_white;
-				font-size: 22px;
-				text-transform: uppercase;
-				font-weight: 600;
-			}
-		}
-	}
-	.categorybanner_item {
-		position: relative;
-    overflow: hidden;
-	}
-}
-
-.categorybanner {
+section.categorybanner {
 	.categorybanner_item {
 		> .categorybanner_title {
 			transform: translateY(-50%);
@@ -148,24 +123,37 @@ div {
 	    right: 5%;
 	    z-index: 2;
 		}
-		> .categorybanner_title.text-left {
-			left: 5%;
+	}
+}
+
+section.categorybanner {
+	.categorybanner_item {
+		position: relative;
+    overflow: hidden;
+		padding: 0;
+		> .categorybanner_title {
 			> h5 {
-				font-size: 16px;
-				text-transform: uppercase;
-				font-weight: 600;
+				color: $basic_white;
 				line-height: 1.1;
 			}
 			> h3 {
-				font-size: 22px;
-				text-transform: uppercase;
-				font-weight: 600;
+				color: $basic_white;
+			}
+		}
+		> .dark_title {
+			left: 5%;
+			> h5 {
+				color: $dim_gray;
+				line-height: 1.1;
+			}
+			> h3 {
+				color: $dim_gray;
 			}
 		}
 	}
 }
 
-.categorybanner {
+section.categorybanner {
 	.categorybanner_item {
 		> .categorybanner_image:before {
 			background-color: rgba(0, 0, 0, 0.5);

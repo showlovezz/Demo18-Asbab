@@ -51,9 +51,13 @@
 }
 
 @media screen and (max-width: 767px) {
-	.homepost-wraper {
-		.card-footer {
-			text-align: center;
+	// post 字體變小及置中
+	section.homepost {
+		.card_homepost {
+			.rwd_footer_size {
+				font-size: 12px;
+				text-align: center;
+			}
 		}
 	}
 }

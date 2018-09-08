@@ -428,57 +428,59 @@ section.homeabout {
 // 關於網站結束
 
 // 網站文章區域開始
-.homepost_wraper {
-	.card-body {
-		> h5 {
-			font-size: 18px;	
+section.homepost {
+	.section_heading {
+		position: relative;
+		margin-bottom: 30px;
+		> h2 {
+			margin-bottom: 30px;
 		}
 		> p {
-			color: $basic_gray;
-		}
-		> p+p {
-			margin-bottom: 0;
-			> a {
-				color: $dim_gray;
-			}
+			max-width: 650px;
+	    display: inline-block;
+	    font-style: italic;
+	    margin-bottom: 0;
+	    color: $basic_gray;
 		}
 	}
 }
 
-.homepost_wraper {
-	.card {
+section.homepost {
+	.card_homepost {
 		> .card-body {
 			> h5 {
-				font-size: 18px;
+				text-transform: capitalize;
 			}
 			> p {
-			color: $basic_gray;
+				color: $basic_gray;
 			}
 			> p+p {
-			margin-bottom: 0;
-			> a {
-				color: $dim_gray;
+				margin-bottom: 0;
+				> a {
+					color: $dim_gray;
 				}
 			}
 		}
 	}
 }
 
-.homepost_wraper {
-	.card-footer {
-		> .post_author {
-			color: $basic_gray;
-			> i {
-				margin-right: 5px;
-			}
-			> b {
-				color: $dim_gray;
-			}
-		}
-		> .post_comment {
-			margin-left: 20px;
-			> i {
+section.homepost {
+	.card_homepost {
+		> .card-footer {
+			> .post_author {
 				color: $basic_gray;
+				> i {
+					margin-right: 5px;
+				}
+				> b {
+					color: $dim_gray;
+				}
+			}
+			> .post_comment {
+				margin-left: 20px;
+				> i {
+					color: $basic_gray;
+				}
 			}
 		}
 	}

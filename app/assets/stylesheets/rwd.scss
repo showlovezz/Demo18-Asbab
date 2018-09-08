@@ -42,9 +42,10 @@
 }
 
 @media screen and (max-width: 767px) {
+	// h3 預設字體改小
 	.festival_seasons_inner {
 		> h3 {
-			font-size: 18px;
+			font-size: 16px;
 		}
 	}
 }

@@ -27,7 +27,7 @@
 	<div class="header_main">
 		<nav class="navbar navbar-expand-lg navbar-light">
 		  <a class="navbar-brand" href="#">
-		  	<img src="http://magicclubgroup.com/bapor/img/logo.png">
+		  	<%= image_tag "bapor_logo" %>
 		  </a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
@@ -71,7 +71,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="http://magicclubgroup.com/bapor/img/slider/slider_bg1.jpg" alt="First slide">
+    	<%= image_tag "slider_bg1", class: "d-block w-100", alt: "First slide" %>
       <div class="text-right carousel_caption">
 		    <h1>50-80% Off</h1>
 		    <h3>All Sale Prices Revealed</h3>
@@ -79,7 +79,7 @@
 		  </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="http://magicclubgroup.com/bapor/img/slider/slider_bg2.jpg" alt="Second slide">
+    	<%= image_tag "slider_bg2", class: "d-block w-100", alt: "Second slide" %>
       <div class="text-left carousel_caption">
 		    <h1>Big Sale 30% Off</h1>
 		    <h3>Prepare Your cart Now!</h3>
@@ -104,7 +104,7 @@
 		<div class="row">
 			<div class="col-md-4 categorybanner_item">
 				<div class="categorybanner_image">
-					<img src="http://magicclubgroup.com/bapor/img/banner/banner1.jpg" alt="banner1" class="img-fluid">
+					<%= image_tag "banner1", class: "img-fluid", alt: "banner1" %>
 				</div>
 				<div class="categorybanner_title">
 					<h5>Women's Formal Wear</h5>
@@ -113,7 +113,7 @@
 			</div>
 			<div class="col-md-4 categorybanner_item">
 				<div class="categorybanner_image">
-					<img src="http://magicclubgroup.com/bapor/img/banner/banner2.jpg" alt="banner2" class="img-fluid">
+					<%= image_tag "banner2", class: "img-fluid", alt: "banner2" %>
 				</div>
 				<div class="categorybanner_title">
 					<h5>Men's Formal Wear</h5>
@@ -122,7 +122,7 @@
 			</div>
 			<div class="col-md-4 categorybanner_item">
 				<div class="categorybanner_image">
-					<img src="http://magicclubgroup.com/bapor/img/banner/banner3.jpg" alt="banner3" class="img-fluid">
+					<%= image_tag "banner3", class: "img-fluid", alt: "banner3" %>
 				</div>
 				<div class="text-left categorybanner_title dark_title">
 					<h5>Kid's</h5>
@@ -188,17 +188,17 @@
 		<div class="row">
 			<div class="col-md-6 mb_30">
 				<div class="promo_banner_wraper">
-					<a href="#"><img src="http://magicclubgroup.com/bapor/img/banner/cat_1.jpg" class="img-fluid"></a>
+					<a href="#"><%= image_tag "cat_1", class: "img-fluid" %></a>
 				</div>
 			</div>
 			<div class="col-md-6 mb_30">
 				<div class="promo_banner_wraper">
-					<a href="#"><img src="http://magicclubgroup.com/bapor/img/banner/cat_2.jpg" class="img-fluid"></a>
+					<a href="#"><%= image_tag "cat_2", class: "img-fluid" %></a>
 				</div>
 			</div>
 			<div class="col-md-12">
 				<div class="promo_banner_wraper">
-					<a href="#"><img src="http://magicclubgroup.com/bapor/img/banner/cat_3.jpg" class="img-fluid"></a>
+					<a href="#"><%= image_tag "cat_3", class: "img-fluid" %></a>
 				</div>
 			</div>
 		</div>
@@ -308,7 +308,7 @@
 			<div class="col-12 col-md-8 col-xl-7">
 				<div class="text-center homeabout_wrapper">
 					<div class="homeabout_image">
-						<img src="http://magicclubgroup.com/bapor/img/logo.png">
+						<%= image_tag "bapor_logo" %>
 					</div>
 					<h6>We design for the future- in ways that make sens right now.</h6>
 					<p>
@@ -417,19 +417,19 @@
 		</div>
 		<div class="d-flex justify-content-around">
 			<div class="logo_item">
-				<img src="https://themeshub.io/preview/asbab/images/brand/1.png" class="img-fluid">
+				<%= image_tag "partner1", class: "img-fluid" %>
 			</div>
 			<div class="logo_item">
-				<img src="https://themeshub.io/preview/asbab/images/brand/2.png" class="img-fluid">
+				<%= image_tag "partner2", class: "img-fluid" %>
 			</div>
 			<div class="logo_item d-none d-sm-block">
-				<img src="https://themeshub.io/preview/asbab/images/brand/3.png" class="img-fluid">
+				<%= image_tag "partner3", class: "img-fluid" %>
 			</div>
 			<div class="logo_item d-none d-sm-block">
-				<img src="https://themeshub.io/preview/asbab/images/brand/4.png" class="img-fluid">
+				<%= image_tag "partner4", class: "img-fluid" %>
 			</div>
 			<div class="logo_item d-none d-sm-block">
-				<img src="https://themeshub.io/preview/asbab/images/brand/5.png" class="img-fluid">
+				<%= image_tag "partner5", class: "img-fluid" %>
 			</div>
 		</div>
 	</div>

@@ -550,111 +550,112 @@ section.homelogo {
 // 網站logo結束
 
 // 頁腳區域開始
-.footer-dark-bg {
-  background-color: #222;
+footer {
+	> .footer_top {
+		background-color: $footer_black1;
+		> .footer_middle {
+			margin: 0px auto;
+  		padding-top: 80px;
+  		padding-bottom: 80px;
+		}
+	}
 }
 
-.pt-80 {
-  padding-top: 80px;
+footer {
+	.footer_block {
+		> h6 {
+			margin-bottom: 30px;
+    	color: $basic_white;
+		}
+		> p {
+			color: $footer_gray;
+			margin-bottom: 10px;
+		}
+	}
 }
 
-.footer-block h6 {
-    margin-bottom: 30px;
-    color: #fff;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.footer-block p {
-	color: $footer_gray;
-	font-weight: 400;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.information-block, .usefull-block {
-	> ul {
-		list-style: none;
-    margin-left: 0;
-		padding-left: 0;
-		margin-bottom: 10px;
-		> li {
-			margin-bottom: 8px;
-			a {
-				color: $footer_gray;
+footer {
+	.footer_block {
+		> ul {
+			list-style: none;
+    	margin-left: 0;
+			padding-left: 0;
+			margin-bottom: 10px;
+			> li {
+				margin-bottom: 8px;
+				> a {
+					color: $footer_gray;
+				}
+				> a:hover {
+					color: $basic_pink;
+				}
 			}
-			a:hover {
-				color: $basic_orange;
+		} 
+	}
+}
+
+footer {
+	.contactus_block {
+		> p {
+			padding-left: 20px;
+  		position: relative;
+  		> i {
+  			position: absolute;
+  			left: 0;
+  			line-height: inherit;
+  		}
+  		> a {
+  			color: $footer_gray;
+  		}
+  		> a:hover {
+  			color: $basic_pink;
+  		}
+		}
+	}
+}
+
+footer {
+	> .footer_bottom {
+		background: $footer_black2;
+	  padding-bottom: 40px;
+	  padding-top: 40px;
+	  line-height: 40px;
+	  .copyright {
+	  	color: $footer_gray;
+	  	margin-bottom: 0;
+	  	> a {
+	  		color: $basic_pink;
+	  	}
+	  }
+	}
+}
+
+footer {
+	> .footer_bottom {
+		.social_link {
+			text-align: right;
+			> ul {
+				list-style: none;
+				display: inline-block;
+				margin-bottom: 0;
+				padding-left: 0;
+				> li {
+					width: 40px;
+					height: 40px;
+					background-color: $footer_black1;
+					margin-right: 10px;
+					text-align: center;
+					transition: all 1s ease 0s;
+					display: inline-block;
+					> a {
+						color: $basic_white;
+					}
+				}
+				> li:hover {
+					background-color: $light_gray;
+				}
 			}
 		}
 	}
 }
-
-.footer-block.contactus-block p {
-  padding-left: 20px;
-  position: relative;
-}
-
-.footer-dark-bg p, .footer-dark-bg a {
-  color: #acacac;
-}
-
-p {
-  font-weight: 400;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.footer-block.contactus-block p i {
-  position: absolute;
-  left: 0;
-  line-height: inherit;
-}
-
-br {
-  font-size: 0;
-  line-height: 0;
-}
-
-.footer-block a:hover {
-  color: $basic_orange;
-}
-
-.footer-middle {
-  margin: 0px auto;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.footer-bottom {
-  background: #252525;
-  padding-bottom: 40px;
-  padding-top: 40px;
-  line-height: 40px;
-}
-
-.copyright  {
-	margin-bottom: 0;
-	a {
-		color: $basic_orange;
-	}
-}
-
-.social-link {
-	ul {
-		list-style: none;
-		li {
-			width: 40px;
-			height: 40px;
-			background-color: #222;
-			margin-right: 10px;
-			text-align: center;
-		}
-		li:hover {
-			background-color: $dim_silver;
-		}
-	}
-}
-
 // 頁腳區域結束

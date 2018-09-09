@@ -529,8 +529,23 @@ section.homepost {
 // 網站文章區域結束
 
 // 網站logo開始
-#homelogo {
+section.homelogo {
 	background-color: $dim_silver;
+	.section_heading {
+		position: relative;
+		margin-bottom: 30px;
+		> h2 {
+			margin-bottom: 30px;
+		}
+		> p {
+			max-width: 650px;
+	    display: inline-block;
+	    font-style: italic;
+	    margin-top: 0;
+	    margin-bottom: 0;
+	    color: $basic_pink;
+		}
+	}
 }
 // 網站logo結束
 

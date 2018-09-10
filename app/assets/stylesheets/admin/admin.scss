@@ -16,10 +16,29 @@ header.header_area_admin {
 
 // 麵包屑區域開始
 section.list_area {
-	nav {
-		> ol {
-			.run_action {
-				color: $basic_pink;
+	margin-bottom: 20px;
+	.list_area_block {
+		background-color: $dim_silver;
+		> ul {
+			margin-bottom: 0;
+			padding-left: 0;
+			list-style: none;
+			> li {
+				display: inline-block;
+				padding: 10px 15px;
+				transition: all 1s ease 0s;
+				> a {
+					color: $dim_gray;
+					> i {
+						margin-right: 5px;
+					}
+				}
+			}
+			li:hover {
+				background-color: $basic_pink;
+				> a {
+					color: $basic_white;
+				}
 			}
 		}
 	}

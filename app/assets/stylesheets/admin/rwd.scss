@@ -1,0 +1,44 @@
+// 手機、平板以下 平板的直向和橫向都能用
+@media screen and (max-width: 767px) {
+	// 後台手機尺寸導覽列的設定
+	header.header_area_admin {
+		.navbar-nav {
+			background-image: url("bg_2");
+			> .nav-item {
+				padding-left: 10px;
+			}
+			> .nav-item {
+				> .basic:hover {
+					color: $basic_pink;
+				}
+			}
+		}
+	}
+}
+
+
+// 桌機、平板以上
+@media screen and (min-width: 768px) {
+	// 大尺寸的設定
+	header.header_area_admin {
+		.navbar-nav {
+			.nav-item {
+				.basic {
+					padding: 8px 20px;
+				}
+			}
+		}
+	}
+	
+	// 大尺寸的設定
+	header.header_area_admin {
+		.navbar-light {
+			.nav-item:hover {
+				background-color: $basic_pink;
+				.basic {
+					color: $basic_white;
+				}
+			}
+		}
+	}
+}

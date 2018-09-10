@@ -1,5 +1,5 @@
 <!-- 後台導覽列開始 -->
-<header class="fixed-top header_area_admin">
+<header class=" header_area_admin sticky-top">
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<%= link_to root_path do %>
 			<%= image_tag "bapor_logo", class: "navbar-brand" %>
@@ -35,3 +35,15 @@
 	</nav>
 </header>
 <!-- 後台導覽列結束 -->
+
+<!-- 麵包屑區域開始 -->
+<section class="list_area">
+	<div class="container">
+		<nav aria-label="breadcrumb">
+		  <ol class="breadcrumb">
+		    <li class="breadcrumb-item run_action" aria-current="page">Dashoard</li>
+		  </ol>
+		</nav>
+	</div>
+</section>
+<!-- 麵包屑區域結束 -->

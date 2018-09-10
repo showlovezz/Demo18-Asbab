@@ -8,4 +8,20 @@ header.header_area_admin {
 		}
 	}
 }
+
+header.header_area_admin {
+	margin-bottom: 20px;
+}
 // 導覽列設定結束
+
+// 麵包屑區域開始
+section.list_area {
+	nav {
+		> ol {
+			.run_action {
+				color: $basic_pink;
+			}
+		}
+	}
+}
+// 麵包屑區域結束

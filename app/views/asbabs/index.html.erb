@@ -11,14 +11,32 @@
 				</div>
 				<div class="col-12 col-md-8 col-xl-9">
 					<div class="header_top_right">
-						<!--登入之前 -->
-						<a href="#"><i class="fa fa-user-plus"></i>註冊加入</a>
-						<a href="#"><i class="fa fa-hand-pointer"></i>會員登入</a>
+						<% if current_user %>
+							<!--登入之後 -->
+							<a href="#"><i class="fa fa-shopping-basket"></i>購物車</a>
+							<a href="#"><i class="fa fa-user"></i>我的帳戶</a>
+							<%#= link_to '修改密碼', edit_user_registration_path %>
+							<a href="#"><i class="fa fa-heart"></i>願望清單</a>
+							<%= link_to destroy_user_session_path, method: :delete do %>
+								<i class="fa fa-share-square"></i>會員登出
+							<% end %>
+    				<% else %>
+    					<!--登入之前 -->
+    					<%= link_to new_user_registration_path do %>
+    						<i class="fa fa-user-plus"></i>註冊加入
+    					<% end %>
+    					<%= link_to new_user_session_path do %>
+    						<i class="fa fa-hand-pointer"></i>會員登入
+    					<% end %>
+    				<% end %>
 						<!--登入之後 -->
 						<!-- <a href="#"><i class="fa fa-shopping-basket"></i>購物車</a> -->
 						<!-- <a href="#"><i class="fa fa-user"></i>我的帳戶</a> -->
 						<!-- <a href="#"><i class="fa fa-heart"></i>願望清單</a> -->
 						<!-- <a href="#"><i class="fa fa-share-square"></i>會員登出</a> -->
+						<!--登入之前 -->
+						<!-- <a href="#"><i class="fa fa-user-plus"></i>註冊加入</a> -->
+						<!-- <a href="#"><i class="fa fa-hand-pointer"></i>會員登入</a> -->
 					</div>
 				</div>
 			</div>

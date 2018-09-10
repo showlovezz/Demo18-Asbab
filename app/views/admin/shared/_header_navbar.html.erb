@@ -1,0 +1,37 @@
+<!-- 後台導覽列開始 -->
+<header class=" header_area_admin sticky-top">
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<%= link_to root_path do %>
+			<%= image_tag "bapor_logo", class: "navbar-brand" %>
+		<% end %>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav ml-auto">
+	    	<li class="nav-item">
+	    		<%= link_to root_path, class: "nav-link basic" do %>
+	        	BaporMarket<span class="sr-only">(current)</span>
+	        <% end %>
+	      </li>
+	      <li class="nav-item">
+	      	<%= link_to "Dashoard", admin_root_path, class: "nav-link basic" %>
+	      </li>
+	      <li class="nav-item">
+	      	<%= link_to "Products", admin_products_path, class: "nav-link basic" %>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link basic" href="#">Orders</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link basic" href="#">Posts</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link basic" href="#">Users</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+</header>
+<!-- 後台導覽列結束 -->

@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   # 後台網址設計
   namespace :admin do
     root "asbabs#index"
+    resources :products
   end
 end

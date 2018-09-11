@@ -87,26 +87,11 @@ section.product_form {
 	.product_form_area {
 		background-image: url(bg_2);
 		padding: 15px 15px;
-		.product_title {
-			margin-bottom: 20px;
-			> h2 {
-				margin-bottom: 0;
-			}
-		}
 	}
 }
 // 新增產品區域 form 結束
 
 // 總表區域開始
-section.product_table_area {
-	.product_title {
-		margin-bottom: 20px;
-		> h2 {
-			margin-bottom: 0;
-		}
-	}
-}
-
 section.product_table_area {
 	.table_data {
 		> .table {

@@ -1,31 +1,96 @@
-<% if @product.errors.any? %>
-  <h2>We have some errors here !</h2>
-  <ul>
-    <% @product.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
+<section class="product_form">
+	<%= form_for [:admin, @product] do |f| %>
+		<div class="container">
+			<!-- 錯誤訊息開始 -->
+			<div class="error_message">
+				<% if @product.errors.any? %>
+				  <h2>We have some errors here !</h2>
+				  <ul>
+				    <% @product.errors.full_messages.each do |msg| %>
+				      <li><%= msg %></li>
+				    <% end %>
+				  </ul>
+				<% end %>
+			</div>
+			<!-- 錯誤訊息結束 -->
+			
+			<!-- 表單區域開始 -->
+			<div class="row product_form_area">
+				<div class="col-3 col-md-3 col-xl-3">
+					<div class="form-group">
+						<% if @product.image.blank? %>
+							<%= image_tag "example_1" ,id: "target", class: "img-fluid" %>
+						<% else %>
+							<%= image_tag @product.image_url, class: "img-fluid", id: "target", original_url: @product.image_url %>
+						<% end %>
+					</div>
+					<div class="form-group">
+						<div class="custom-file">
+							<%= f.label :image, "Image", class: "custom-file-label" %>
+							<%= f.file_field :image, accept: "image/gif, image/jpeg, image/png" , class: "custom-file-input" %>
+						</div>
+					</div>
+				</div>
+				<div class="col-9 col-md-9 col-xl-9">
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<%= f.label :name, "Name：" %>
+								<%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<%= f.label :tag, "Tag：" %>
+								<%= f.text_field :tag, placeholder: "Tag", class: "form-control" %>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<%= f.label :description, "Description：" %>
+						<%= f.text_area :description, rows: "8", class: "form-control" %>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<%= f.label :basic_price, "原價：" %>
+								<%= f.text_field :basic_price, placeholder: "基本定價", class: "form-control" %>
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+								<%= f.label :special_price, "特價：" %>
+								<%= f.text_field :special_price, placeholder: "折扣價錢", class: "form-control" %>
+							</div>
+						</div>
+					</div>
+					<div class="form-group text-right">
+						<%= f.submit class: "btn btn-success btn-lg" %>
+					</div>
+				</div>
+			</div>
+			<!-- 表單區域結束 -->
+		</div>
+	<% end %>
+</section>
 
-<!-- 表單 -->
-<%= form_for [:admin, @product] do |f| %>
-	<%= f.label :name, "Name" %>
-	<%= f.text_field :name %>
+<script>
+	$(function(){
+		$("#product_image").change(function(){
+			readURL(this, "target");
+		});
 
-	<%= f.label :tag, "Tag" %>
-	<%= f.text_field :tag %>
-
-	<%= f.label :description, "Description" %>
-	<%= f.text_area :description %>
-
-	<%= f.label :basic_price, "原價：" %>
-	<%= f.text_field :basic_price %>
-
-	<%= f.label :special_price, "特價：" %>
-	<%= f.text_field :special_price %>
-
-	<%= f.label :image, "Image" %>
-	<%= f.file_field :image %>
-
-	<%= f.submit %>
-<% end %>
+		function readURL(input, image_tag_id){
+			if(input.files && input.files[0]){
+				var reader = new FileReader();
+				reader.onload = function (e){
+					$("#" + image_tag_id).attr('src', e.target.result);
+				}
+				reader.readAsDataURL(input.files[0]);
+			} else {
+				var original_url = $("#" + image_tag_id).attr("original_url");
+				$("#" + image_tag_id).attr('src', original_url);
+			}
+		}
+	});
+</script>

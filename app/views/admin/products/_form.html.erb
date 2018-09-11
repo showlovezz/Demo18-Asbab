@@ -15,57 +15,64 @@
 			<!-- 錯誤訊息結束 -->
 			
 			<!-- 表單區域開始 -->
-			<div class="row product_form_area">
-				<div class="col-3 col-md-3 col-xl-3">
-					<div class="form-group">
-						<% if @product.image.blank? %>
-							<%= image_tag "example_1" ,id: "target", class: "img-fluid" %>
-						<% else %>
-							<%= image_tag @product.image_url, class: "img-fluid", id: "target", original_url: @product.image_url %>
-						<% end %>
-					</div>
-					<div class="form-group">
-						<div class="custom-file">
-							<%= f.label :image, "Image", class: "custom-file-label" %>
-							<%= f.file_field :image, accept: "image/gif, image/jpeg, image/png" , class: "custom-file-input" %>
+			<div class="product_form_area">
+				<div class="row">
+					<div class="col-12 col-md-12 col-xl-12">
+						<div class="product_title">
+							<h2>New Product</h2>
 						</div>
 					</div>
-				</div>
-				<div class="col-9 col-md-9 col-xl-9">
-					<div class="row">
-						<div class="col">
-							<div class="form-group">
-								<%= f.label :name, "Name：" %>
-								<%= f.text_field :name, placeholder: "Name", class: "form-control" %>
-							</div>
+					<div class="col-3 col-md-3 col-xl-3">
+						<div class="form-group">
+							<% if @product.image.blank? %>
+								<%= image_tag "example_1" ,id: "target", class: "img-fluid" %>
+							<% else %>
+								<%= image_tag @product.image_url, class: "img-fluid", id: "target", original_url: @product.image_url %>
+							<% end %>
 						</div>
-						<div class="col">
-							<div class="form-group">
-								<%= f.label :tag, "Tag：" %>
-								<%= f.text_field :tag, placeholder: "Tag", class: "form-control" %>
+						<div class="form-group">
+							<div class="custom-file">
+								<%= f.label :image, "Image", class: "custom-file-label" %>
+								<%= f.file_field :image, accept: "image/gif, image/jpeg, image/png" , class: "custom-file-input" %>
 							</div>
 						</div>
 					</div>
-					<div class="form-group">
-						<%= f.label :description, "Description：" %>
-						<%= f.text_area :description, rows: "8", class: "form-control" %>
-					</div>
-					<div class="row">
-						<div class="col">
-							<div class="form-group">
-								<%= f.label :basic_price, "原價：" %>
-								<%= f.text_field :basic_price, placeholder: "基本定價", class: "form-control" %>
+					<div class="col-9 col-md-9 col-xl-9">
+						<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<%= f.label :name, "Name：" %>
+									<%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<%= f.label :tag, "Tag：" %>
+									<%= f.text_field :tag, placeholder: "Tag", class: "form-control" %>
+								</div>
 							</div>
 						</div>
-						<div class="col">
-							<div class="form-group">
-								<%= f.label :special_price, "特價：" %>
-								<%= f.text_field :special_price, placeholder: "折扣價錢", class: "form-control" %>
+						<div class="form-group">
+							<%= f.label :description, "Description：" %>
+							<%= f.text_area :description, rows: "8", class: "form-control" %>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="form-group">
+									<%= f.label :basic_price, "原價：" %>
+									<%= f.text_field :basic_price, placeholder: "基本定價", class: "form-control" %>
+								</div>
+							</div>
+							<div class="col">
+								<div class="form-group">
+									<%= f.label :special_price, "特價：" %>
+									<%= f.text_field :special_price, placeholder: "折扣價錢", class: "form-control" %>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="form-group text-right">
-						<%= f.submit class: "btn btn-success btn-lg" %>
+						<div class="form-group text-right mb-0">
+							<%= f.submit class: "btn btn-success btn-lg" %>
+						</div>
 					</div>
 				</div>
 			</div>

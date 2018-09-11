@@ -2,7 +2,7 @@ class Admin::ProductsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :authenticate_admin
 
-	before_action :find_product, only: [:edit, :update]
+	before_action :find_product, only: [:edit, :update, :destroy]
 
 	def index
 		@products = Product.all
@@ -34,6 +34,12 @@ class Admin::ProductsController < ApplicationController
 			flash.now[:alert] = "產品修改失敗"
 			render :edit
 		end
+	end
+
+	def destroy
+		@product.destroy
+		flash[:alert] = "產品已經被刪除 !"
+		redirect_to admin_products_path
 	end
 
 	private

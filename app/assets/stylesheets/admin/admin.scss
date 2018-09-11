@@ -108,7 +108,7 @@ section.product_table_area {
 			}
 		}
 		.spacer {
-			height: 5px;
+			height: 10px;
     	background: transparent;
 		}
 	}
@@ -118,7 +118,7 @@ section.product_table_area {
 	table {
 		> tbody {
 			> .item {
-				background-color: $light_yellow;
+				background-color: $palegoldenrod;
 				-webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
     		-moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
     		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);

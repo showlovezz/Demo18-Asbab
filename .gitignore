@@ -35,3 +35,6 @@
 
 # Photo
 /public/uploads
+
+# Admin
+/db/seeds.rb

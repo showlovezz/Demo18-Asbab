@@ -18,6 +18,16 @@
 				<div class="category_title">
 					<h2>data table</h2>
 				</div>
+				<!-- 表單新增區域開始 -->
+				<%= form_for [:admin, @category] do |f| %>
+					<div class="form-inline">
+						<div class="form-group">
+							<%= f.text_field :name, placeholder: "Category name", class: "form-control" %>
+						</div>
+						<%= f.submit class: "btn btn-primary ml-1 mr-1" %>
+					</div>
+				<% end %>
+				<!-- 表單新增區域結束 -->
 				<div class="table_data">
 					<table class="table">
 						<caption>List of Categories</caption>

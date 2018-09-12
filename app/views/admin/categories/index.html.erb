@@ -25,6 +25,9 @@
 							<%= f.text_field :name, placeholder: "Category name", class: "form-control" %>
 						</div>
 						<%= f.submit class: "btn btn-primary ml-1 mr-1" %>
+					 	<% if @category.errors.any? %>
+		        	<%= @category.errors.full_messages.to_sentence %>
+		      	<% end %>
 					</div>
 				<% end %>
 				<!-- 表單新增區域結束 -->

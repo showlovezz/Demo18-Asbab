@@ -33,6 +33,9 @@
 						</div>
 					</div>
 					<div class="col-9 col-md-9 col-xl-9">
+						<div class="form-group">
+							<%= f.collection_select :category_id, Category.all, :id, :name, {prompt: true}, {class: "form-control"} %>
+						</div>
 						<div class="row">
 							<div class="col">
 								<div class="form-group">
@@ -61,7 +64,7 @@
 							<div class="col">
 								<div class="form-group">
 									<%= f.label :special_price, "特價：" %>
-									<%= f.text_field :special_price, placeholder: "折扣價錢", class: "form-control" %>
+									<%= f.text_field :special_price, placeholder: "特別價錢", class: "form-control" %>
 								</div>
 							</div>
 						</div>

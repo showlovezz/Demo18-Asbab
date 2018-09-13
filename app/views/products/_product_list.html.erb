@@ -1,0 +1,42 @@
+<!-- 特色商品區域開始 -->
+<section id="featured_collecations" class="featured_collecations section_padding_bottom ">
+	<div class="container">
+		<div class="text-center section_heading">
+			<h2>Featured Collections</h2>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+			</p>
+		</div>
+		<ul class="nav justify-content-center product_category">
+		  <li class="nav-item">
+		    <a class="nav-link action" href="#">Footwear</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Men</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Women</a>
+		  </li>
+		</ul>
+		<div class="row">
+			<% @products.each do |product| %>
+				<div class="col-6 col-md-3 col-xl-3">
+					<%= link_to product_path(product) do %>
+						<div class="product_item">
+							<div class="product_item_wraper">
+								<div class="product_image_wraper">
+									<%= image_tag product.image.url, class: "img-fluid" %>
+								</div>
+							</div>
+							<div class="text-center product_item_detail">
+								<p><%= product.name %></p>
+								<h6><del>$<%= product.basic_price %></del>$<%= product.special_price %><span class="badge badge-danger ml-1">限時特價</span></h6>
+							</div>
+						</div>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</section>
+<!-- 特色商品區域結束 -->

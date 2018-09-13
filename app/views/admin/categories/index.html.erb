@@ -48,7 +48,7 @@
 					      	<td><%= category.name %></td>
 					      	<td class="text-center">
 						      	<span class="edit">
-						      		<%= link_to edit_admin_category_path(category), data_toggle: "tooltip", title: "編輯" do %>
+						      		<%= link_to admin_categories_path(id: category.id), data_toggle: "tooltip", title: "編輯" do %>
 						      			<i class="fas fa-pencil-alt"></i>
 						      		<% end %>
 						      	</span>

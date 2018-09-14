@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 	# 前台網址設計
   root "asbabs#index"
   resources :products, only: [:index, :show]
+  resources :categories, only: [:show]
 
   # 後台網址設計
   namespace :admin do

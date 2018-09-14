@@ -55,18 +55,11 @@
 		      <li class="nav-item">
 		      	<%= link_to "Home", root_path, class: "nav-link nav_link_page" %>
 		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link nav_link_page" href="#">Men</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link nav_link_page" href="#">Women</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link nav_link_page" href="#">Kids</a>
-		      </li>
-		      <li class="nav-item">
-		        <a class="nav-link nav_link_page" href="#">Footwear</a>
-		      </li>
+		      <% @categories.each do |category| %>
+			      <li class="nav-item">
+			      	<%= link_to category.name, category_path(category), class: "nav-link nav_link_page" %>
+			      </li>
+			    <% end %>
 		      <li class="nav-item">
 		        <a class="nav-link nav_link_page" href="#">Blog</a>
 		      </li>

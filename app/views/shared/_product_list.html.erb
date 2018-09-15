@@ -1,0 +1,14 @@
+<!-- 產品卡片區域開始 -->
+<%= link_to product_path(product) do %>
+	<div class="product_item">
+		<div class="product_image_wraper">
+			<%= image_tag product.image.url, class: "img-fluid big_img" %>
+		</div>
+		<div class="text-center product_content">
+			<p><%= product.name %></p>
+			<del>$<%= product.basic_price %></del>
+			<span>$<%= product.special_price %></span>
+		</div>
+	</div>
+<% end %>
+<!-- 產品卡片區域結束 -->

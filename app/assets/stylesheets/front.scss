@@ -345,62 +345,9 @@ section.featured_collecations {
 	}
 }
 
-
 section.featured_collecations {
 	a.action {
 		color: $basic_pink !important;
-	}
-}
-
-section.featured_collecations {
-	.product_item_wraper {
-		margin-bottom: 15px;
-	}
-	.product_item_detail {
-		> p {
-			color: $dim_gray;
-			transition: all 1s ease 0s;
-			margin-bottom: 8px;
-		}
-		> h6 {
-			margin-bottom: 0;
-			color: $basic_pink;
-			font-size: 20px;
-			> del {
-				margin-right: 10px;
-				color: $basic_gray;
-				font-style: italic;
-				font-size: 14px;
-			}
-		}
-	}
-}
-
-section.featured_collecations {
-	.product_item:hover {
-		p {
-			color: $basic_pink;
-		}
-		img {
-			-webkit-transform: scale(1.09);
-	    -moz-transform: scale(1.09);
-	    -o-transform: scale(1.09);
-	    -ms-transform: scale(1.09);
-	    transform: scale(1.09);
-		}
-	}
-}
-
-// text text
-section.featured_collecations {
-	.product_image_wraper {
-		position: relative;
-    overflow: hidden;
-		> img {
-			-webkit-transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
-	    -moz-transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
-	    transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
-		}
 	}
 }
 // 特色商品區域結束
@@ -853,31 +800,6 @@ section.random_product {
 		margin-bottom: 30px;
 		> h2 {
 			margin-bottom: 0;
-		}
-	}
-}
-
-section.random_product {
-	.product_item {
-		margin-bottom: 20px;
-		> .product_image_wraper {
-			margin-bottom: 10px;
-		}
-		> .product_content {
-			color: $dim_gray;
-			> p {
-				margin-bottom: 10px;
-			}
-			> del {
-				margin-right: 10px;
-		    color: $basic_gray;
-		    font-style: italic;
-		    font-size: 14px;
-			}
-			> span {
-				font-size: 20px;
-				color: $basic_pink;
-			}
 		}
 	}
 }

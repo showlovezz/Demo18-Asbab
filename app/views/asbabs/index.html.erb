@@ -159,7 +159,34 @@
 <!-- 節日、季節促銷區域結束 -->
 
 <!-- 特色商品區域開始 -->
-<%= render "products/product_list" %>
+<section id="featured_collecations" class="featured_collecations spb_60 ">
+	<div class="container">
+		<div class="text-center section_heading">
+			<h2>Featured Collections</h2>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+			</p>
+		</div>
+		<!-- <ul class="nav justify-content-center product_category">
+		  <li class="nav-item">
+		    <a class="nav-link action" href="#">Footwear</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Men</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="#">Women</a>
+		  </li>
+		</ul> -->
+		<div class="row">
+			<% @products.each do |product| %>
+				<div class="col-6 col-md-3 col-xl-3">
+					<%= render partial: "shared/product_list", locals: {product: product} %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</section>
 <!-- 特色商品區域結束 -->
 
 <!-- 關於網站開始 -->

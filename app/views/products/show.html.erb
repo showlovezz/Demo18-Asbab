@@ -82,20 +82,9 @@
 					<h2 class="text-center">Related Product</h2>
 				</div>
 			</div>
-			<% @random_product.each do |random_product| %>
+			<% @products.each do |product| %>
 				<div class="col-6 col-md-3 col-xl-3">
-					<%= link_to product_path(random_product) do %>
-						<div class="product_item">
-							<div class="product_image_wraper">
-								<%= image_tag random_product.image.url, class: "img-fluid" %>
-							</div>
-							<div class="text-center product_content">
-								<p><%= random_product.name %></p>
-								<del>$<%= random_product.basic_price %></del>
-								<span>$<%= random_product.special_price %></span>
-							</div>
-						</div>
-					<% end %>
+					<%= render partial: "shared/product_list", locals: {product: product} %>
 				</div>
 			<% end %>
 		</div>

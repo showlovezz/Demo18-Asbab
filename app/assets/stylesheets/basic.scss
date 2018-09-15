@@ -74,7 +74,73 @@ h6 {
   padding-bottom: 80px;
 }
 
-// 下內距 40px
+// 下內距 80px
 .section_padding_bottom {
   padding-bottom: 80px;
+}
+
+// 下內距 60px
+.spb_60 {
+  padding-bottom: 60px;
+}
+
+// 產品及圖片放大 Css 屬性
+section.random_product, .featured_collecations {
+  .product_item:hover {
+    > .product_image_wraper {
+      > .big_img {
+        -webkit-transform: scale(1.09);
+        -moz-transform: scale(1.09);
+        -o-transform: scale(1.09);
+        -ms-transform: scale(1.09);
+        transform: scale(1.09);
+      }
+    }
+    > .product_content {
+      > p {
+        color: $basic_pink;
+      }
+    }
+  }
+}
+
+section.random_product, .featured_collecations {
+  .product_item {
+    > .product_image_wraper {
+      position: relative;
+      overflow: hidden;
+      > .big_img {
+        -webkit-transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+        -moz-transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+        transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+      }
+    }
+  }
+}
+
+section.random_product, .featured_collecations {
+  .product_item {
+    margin-bottom: 20px;
+    > .product_image_wraper {
+      margin-bottom: 10px;
+    }
+    > .product_content {
+      color: $dim_gray;
+      > p {
+        margin-bottom: 10px;
+        transition: all 1s ease 0s;
+      }
+      > del {
+        margin-right: 10px;
+        color: $basic_gray;
+        font-style: italic;
+        font-size: 14px;
+      }
+      > span {
+        font-size: 20px;
+        color: $basic_pink;
+        font-weight: 600;
+      }
+    }
+  }
 }

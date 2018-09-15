@@ -85,7 +85,7 @@ h6 {
 }
 
 // 產品及圖片放大 Css 屬性
-section.random_product, .featured_collecations {
+section.random_product, .featured_collecations, section.category_products {
   .product_item:hover {
     > .product_image_wraper {
       > .big_img {
@@ -104,7 +104,7 @@ section.random_product, .featured_collecations {
   }
 }
 
-section.random_product, .featured_collecations {
+section.random_product, .featured_collecations, section.category_products {
   .product_item {
     > .product_image_wraper {
       position: relative;
@@ -118,7 +118,7 @@ section.random_product, .featured_collecations {
   }
 }
 
-section.random_product, .featured_collecations {
+section.random_product, .featured_collecations, section.category_products {
   .product_item {
     margin-bottom: 20px;
     > .product_image_wraper {

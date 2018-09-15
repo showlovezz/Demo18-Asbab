@@ -71,6 +71,17 @@
 	}
 }
 
+@media screen and (max-width: 767px) {
+	section.category_products {
+		.col-12.col-md-3.col-xl-3 {
+			order: 2;
+		}
+		.col-12.col-md-9.col-xl-9 {
+			order: 1;
+		}
+	}
+}
+
 // 桌機、平板以上
 @media screen and (min-width: 768px) {
 	// 我的帳號區域置右

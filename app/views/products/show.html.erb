@@ -9,7 +9,7 @@
 			<div class="col-12 col-md-12 col-xl-12">
 				<ul class="breadcrumb_link">
 					<li><%= link_to "Home", root_path, class: "link_item" %></li>
-					<li><a href="#" class="link_item">Women</a></li>
+					<li><%= link_to @product.category.name, category_path(@product.category), class: "link_item" %></li>
 					<li>Printed Round White T-shirt</li>
 				</ul>
 			</div>
@@ -53,7 +53,7 @@
 					</div>
 					<div class="product_meta">
 						<span>SKU : <span class="sku">Product SKU</span></span>
-						<span>Category : <span class="category">產品分類，待更新</span></span>
+						<span>Category : <span class="category"><%= @product.category.name %></span></span>
 						<span>Tag : <span class="tag"><%= @product.tag %></span></span>
 					</div>
 					<div class="product_share">

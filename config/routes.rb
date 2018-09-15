@@ -11,5 +11,6 @@ Rails.application.routes.draw do
     root "asbabs#index"
     resources :products, except: [:show]
     resources :categories
+    resources :posts, except: [:show]
   end
 end

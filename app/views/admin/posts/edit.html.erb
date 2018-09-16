@@ -1,0 +1,18 @@
+<!-- 後台導覽列開始 -->
+<%= render "admin/shared/header_navbar" %>
+<!-- 後台導覽列結束 -->
+
+<!-- 麵包屑區域開始 -->
+<%= render "list_area" %>
+<!-- 麵包屑區域結束 -->
+
+<!-- 表單開始 -->
+<section class="post_form">
+	<div class="container">
+		<div class="post_form_area">
+			<h2>edit data</h2>
+			<%= render partial: "form", locals: {post: @post} %>
+		</div>
+	</div>
+</section>
+<!-- 表單結束 -->

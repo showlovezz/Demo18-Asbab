@@ -2,6 +2,8 @@ class Admin::PostsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :authenticate_admin
 
+	before_action :find_post, only: [:edit, :update]
+
 	def index
 		@posts = Post.all
 	end
@@ -21,9 +23,26 @@ class Admin::PostsController < ApplicationController
 		end
 	end
 
+	def edit
+	end
+
+	def update
+		if @post.update(post_params)
+			flash[:notice] = "文章修改成功"
+			redirect_to admin_posts_path
+		else
+			flash.now[:alert] = "文章修改失敗"
+			render :edit
+		end
+	end
+
 	private
 
 	def post_params
 		params.require(:post).permit(:title, :description, :image)
+	end
+
+	def find_post
+		@post = Post.find(params[:id])
 	end
 end

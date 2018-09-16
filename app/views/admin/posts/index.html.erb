@@ -5,3 +5,61 @@
 <!-- 麵包屑區域開始 -->
 <%= render "list_area" %>
 <!-- 麵包屑區域結束 -->
+
+<!-- 總表區域開始 -->
+<section class="post_table">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-12 col-xl-12">
+				<h2>data table</h2>
+				<div class="table_data table_rwd">
+					<table class="table">
+						<caption>List of Posts</caption>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Title</th>
+								<th>狀態</th>
+								<th></th>
+							</tr>
+						</thead>
+						<% @posts.each do |post| %>
+							<tbody>
+								<tr class="item">
+									<td><%= post.id %></td>
+						      <td><%= post.title %></td>
+						      <td>狀態</td>
+						      <td class="text-center">
+						      	<span class="publish">
+						      		<a href="#" data_toggle="tooltip" title="發佈">
+						      			<i class="fas fa-step-forward"></i>
+						      		</a>
+						      	</span>
+						      	<span class="edit">
+						      		<%= link_to edit_admin_post_path(post), data_toggle: "tooltip", title: "編輯" do %>
+						      			<i class="fas fa-pencil-alt"></i>
+						      		<% end %>
+						      	</span>
+						      	<span class="delete">
+						      		<%= link_to admin_post_path(post), data_toggle: "tooltip", title: "刪除", method: :delete, data: {confirm:"Are you sure?"}  do %>
+						      			<i class="fas fa-trash-alt"></i>
+						      		<% end %>
+						      	</span>
+						      </td>
+								</tr>
+								<tr class="spacer"></tr>
+							</tbody>
+						<% end %>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 總表區域結束 -->
+
+<script>
+	$(function(){
+		$('[data_toggle="tooltip"]').tooltip();
+	});
+</script>

@@ -91,127 +91,23 @@ section.product_form {
 }
 // 新增產品區域 form 結束
 
-// 總表區域開始
-section.product_table_area {
-	.table_data {
-		> .table {
-			> thead {
-				th {
-					border: none;
-				}
-			}
-			th, td {
-				border: none;
-			}
-			tbody + tbody {
-				border: none;
-			}
-		}
-		.spacer {
-			height: 10px;
-    	background: transparent;
-		}
+// 總表表格開始
+section.product_table {
+	.product_category {
+		padding: 5px 10px;
+		background-color: $basic_pink;
+		color: $basic_white;
 	}
 }
+// 總表表格結束
 
-section.product_table_area {
-	table {
-		> tbody {
-			> .item {
-				background-color: $palegoldenrod;
-				-webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
-    		-moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
-    		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
-    		> td {
-    			padding: 25px 12px;
-    			> .product_category {
-    				padding: 5px 10px;
-    				background-color: $basic_pink;
-    				color: $basic_white;
-    			}
-    		}
-			}
-		}
-	}
-}
-
-section.product_table_area {
-	table {
-		> tbody {
-			td {
-				> .publish, .edit, .delete {
-			    padding: 5px 10px;
-			    margin-right: 5px;
-			    background-color: $dim_silver;
-			    > a {
-			    	color: $dim_gray;
-			    }
-				}
-			}
-		}
-	}
-}
-// 總表區域結束
-
-// 產品分類區域開始
-section.category_table_area {
-	.category_title {
+// 產品分類表格開始
+section.category_table {
+	.form-inline {
 		margin-bottom: 20px;
-		> h2 {
-			margin-bottom: 0;
-		}
 	}
 }
-
-section.category_table_area {
-	.table {
-		.item {
-			background-color: $palegoldenrod;
-			-webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
-  		-moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
-  		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.03);
-		}
-		> thead {
-			th {
-				border: none;
-			}
-		}
-		th {
-			border: none;
-		}
-		td {
-			border: none;
-			padding: 25px 12px;
-		}
-		> tbody + tbody {
-			border: none;
-		}
-		> tbody {
-			.spacer {
-				height: 10px;
-    		background: transparent;
-			}
-		}
-	}
-}
-
-section.category_table_area {
-	table {
-		> tbody {
-			td {
-				> .publish, .edit, .delete {
-			    padding: 5px 10px;
-			    margin-right: 5px;
-			    background-color: $dim_silver;
-			    > a {
-			    	color: $dim_gray;
-			    }
-				}
-			}
-		}
-	}
-}
-// 產品分類區域結束
+// 產品分類表格結束
 
 // 文章form區域開始
 section.post_form {

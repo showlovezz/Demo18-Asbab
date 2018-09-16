@@ -1,0 +1,67 @@
+<%= form_for [:admin, post] do |f| %>
+	<div class="row">
+		<div class="col-12 col-md-12 col-xl-12">
+			<!-- 錯誤訊息開始 -->
+			<div class="error_message">
+				<% if @post.errors.any? %>
+				  <h2>We have some errors here !</h2>
+				  <ul>
+				    <% @post.errors.full_messages.each do |msg| %>
+				      <li><%= msg %></li>
+				    <% end %>
+				  </ul>
+				<% end %>
+			</div>
+			<!-- 錯誤訊息結束 -->
+		</div>
+		<div class="col-5 col-md-5 col-xl-5">
+			<div class="form-group">
+				<% if @post.image.blank? %>
+					<%= image_tag "example_2" ,id: "target", class: "img-fluid" %>
+				<% else %>
+					<%= image_tag @post.image_url, class: "img-fluid", id: "target", original_url: @post.image_url %>
+				<% end %>
+			</div>
+			<div class="form-group">
+				<div class="custom-file">
+					<%= f.label :image, "Image", class: "custom-file-label" %>
+					<%= f.file_field :image, accept: "image/gif, image/jpeg, image/png" , class: "custom-file-input" %>
+				</div>
+			</div>
+		</div>
+		<div class="col-7 col-md-7 col-xl-7">
+			<div class="form-group">
+				<%= f.label :title, "Title" %>
+				<%= f.text_field :title, placeholder: "文章標題", class: "form-control" %>
+			</div>
+			<div class="form-group">
+				<%= f.label :description, "Description：" %>
+				<%= f.text_area :description, rows: "15", class: "form-control" %>
+			</div>
+			<div class="form-group text-right mb-0">
+				<%= f.submit class: "btn btn-success btn-lg" %>
+			</div>
+		</div>
+	</div>
+<% end %>
+
+<script>
+	$(function(){
+		$("#post_image").change(function(){
+			readURL(this, "target");
+		});
+
+		function readURL(input, image_tag_id){
+			if(input.files && input.files[0]){
+				var reader = new FileReader();
+				reader.onload = function (e){
+					$("#" + image_tag_id).attr('src', e.target.result);
+				}
+				reader.readAsDataURL(input.files[0]);
+			} else {
+				var original_url = $("#" + image_tag_id).attr("original_url");
+				$("#" + image_tag_id).attr('src', original_url);
+			}
+		}
+	});
+</script>

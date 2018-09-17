@@ -1,0 +1,96 @@
+<!-- 導覽區域開始 -->
+<%= render "shared/head_nav" %>
+<!-- 導覽區域結束 -->
+
+<!-- 麵包屑區域開始 -->
+<section class="breadcrumb d-none d-sm-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-12 col-xl-12">
+				<ul class="breadcrumb_link">
+					<li><%= link_to "Home", root_path, class: "link_item" %></li>
+					<li>Blog Detail</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 麵包屑區域結束 -->
+
+<!-- 文章 show 區域開始 -->
+<section class="post_show_area">
+	<div class="container">
+		<div class="row">
+			<div class="col-8 col-md-8 col-xl-8">
+				<div class="post_left">
+					<h2>Blog Detail</h2>
+					<div class="post_image">
+						<%= image_tag @post.image.url, class: "img-fluid" %>
+					</div>
+					<h4><%= @post.title %></h4>
+					<div class="postmeta">
+						<span class= "post_author">
+							<i class="fa fa-user"></i>By
+	      			<b>admin</b>
+						</span>
+						<span class= "post_date">
+							<i class="far fa-calendar"></i>
+							<b><%= verbose_data @post.created_at %></b>
+						</span>
+						<span class= "post_comment">
+							<i class="far fa-comments"></i>
+	      			<b>10 comments</b>
+						</span>
+					</div>
+					<div class="post_description">
+						<p><%= simple_format @post.description %></p>
+					</div>
+					<div class="post_share">
+						<span>share :</span>
+						<ul>
+							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fab fa-github-alt"></i></a></li>
+							<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+					<hr>
+					<div class="post_comment_block">
+						<h3>Recent Comments</h3>
+					</div>
+				</div>
+			</div>
+			<div class="col-4 col-md-4 col-xl-4">
+				<div class="post_right">
+					<h4>Recent Blog</h4>
+					<% @posts.each do |post| %>
+						<div class="row">
+							<div class="col-4 col-md-4 col-xl-4">
+								<div class="left_image">
+									<%= link_to post_path(post) do %>
+										<%= image_tag post.image.url, class: "img-fluid" %>
+									<% end %>
+								</div>
+							</div>
+							<div class="col-8 col-md-8 col-xl-8">
+								<div class="right_content">
+									<p>
+										<%= link_to truncate( post.title, length: 30), post_path(post) %>
+									</p>
+									<em><%= verbose_data post.created_at %></em>
+								</div>
+							</div>
+						</div>
+						<hr>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- 文章 show 區域結束 -->
+
+<!-- 頁腳區域開始 -->
+<%= render "shared/footer" %>
+<!-- 頁腳區域結束 -->

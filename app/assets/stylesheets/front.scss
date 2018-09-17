@@ -663,43 +663,6 @@ footer {
 }
 // 頁腳區域結束
 
-// 麵包屑區域開始
-section.breadcrumb {
-	margin-bottom: 20px;
-	padding: 30px 0;
-	border-top: 1px solid $dim_silver;
-	.breadcrumb_link {
-		list-style: none;
-		padding-left: 0;
-		margin-bottom: 0;
-		> li {
-			display: inline-block;
-			color: $basic_gray;
-			> .link_item {
-				color: $dim_gray;
-				font-weight: 900;
-			}
-			> .link_item:hover {
-				color: $basic_pink;
-			}
-		}
-	}
-}
-
-section.breadcrumb {
-	.breadcrumb_link {
-		> li {
-			> .link_item:after {
-				content: "=>";
-				padding-right: 7px;
-	    	padding-left: 7px;
-	    	color: $dim_gray;
-			}
-		}
-	}
-}
-// 麵包屑區域結束
-
 // 產品詳細介紹區域開始
 section.product_show_area {
 	.mb_20 {
@@ -903,3 +866,110 @@ section.category_products {
 	}
 }
 // 同個分類下秀出全部產品結束
+
+// 文章 show 區域開始
+section.post_show_area {
+	.post_left {
+		> h2 {
+			margin-bottom: 20px;
+		}
+		> .post_image {
+			margin-bottom: 20px;
+		}
+		> h4 {
+			margin-bottom: 20px;
+			text-transform: capitalize;
+		}
+		> .postmeta {
+			margin-bottom: 20px;
+			> .post_author, .post_date, .post_comment {
+				color: $basic_gray;
+				margin-right: 10px;
+				> i {
+					margin-right: 5px;
+				}
+				> b {
+					color: $dim_gray;
+					text-transform: capitalize;
+				}
+			}
+		}
+		> .post_description {
+			margin-bottom: 20px;
+			color: $basic_gray;
+		}
+		> .post_share {
+			margin-bottom: 20px;
+			> ul {
+				display: inline-block;
+				padding-left: 0;
+				margin-bottom: 0;
+				> li {
+					list-style: none;
+					display: inline-block;
+					margin: 0 5px;
+					> a {
+						color: $dim_gray;
+					}
+				}
+			}
+		}
+		> hr {
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+section.post_show_area {
+	.post_left {
+		> .post_comment_block {
+			> h3 {
+				margin-bottom: 20px; // TODO
+			}
+		}
+	}
+}
+
+section.post_show_area {
+	.post_right {
+		> h4 {
+			margin: 20px 0;
+		}
+		> ul {
+			padding: 0;
+			margin: 0;
+			> li {
+				list-style: none;
+				> a {
+					width: 25%;
+					display: table-cell;
+    			float: none;
+    			margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+section.post_show_area {
+	.post_right {
+		.right_content {
+		> p {
+			> a {
+				color: $dim_gray;
+			}
+			> a:hover {
+				color: $basic_pink;
+				}
+			}
+			> em {
+				color: $basic_gray;
+			}
+		}
+		hr {
+			margin: 20px 0;
+		}
+	}
+}
+// 文章 show 區域結束

@@ -870,34 +870,6 @@ section.category_products {
 // 文章 show 區域開始
 section.post_show_area {
 	.post_left {
-		> h2 {
-			margin-bottom: 20px;
-		}
-		> .post_image {
-			margin-bottom: 20px;
-		}
-		> h4 {
-			margin-bottom: 20px;
-			text-transform: capitalize;
-		}
-		> .postmeta {
-			margin-bottom: 20px;
-			> .post_author, .post_date, .post_comment {
-				color: $basic_gray;
-				margin-right: 10px;
-				> i {
-					margin-right: 5px;
-				}
-				> b {
-					color: $dim_gray;
-					text-transform: capitalize;
-				}
-			}
-		}
-		> .post_description {
-			margin-bottom: 20px;
-			color: $basic_gray;
-		}
 		> .post_share {
 			margin-bottom: 20px;
 			> ul {
@@ -910,6 +882,9 @@ section.post_show_area {
 					margin: 0 5px;
 					> a {
 						color: $dim_gray;
+					}
+					> a:hover {
+						color: $basic_pink;
 					}
 				}
 			}
@@ -930,46 +905,49 @@ section.post_show_area {
 		}
 	}
 }
+// 文章 show 區域結束
 
-section.post_show_area {
-	.post_right {
-		> h4 {
-			margin: 20px 0;
-		}
-		> ul {
-			padding: 0;
-			margin: 0;
-			> li {
-				list-style: none;
-				> a {
-					width: 25%;
-					display: table-cell;
-    			float: none;
-    			margin-right: 0;
-				}
-			}
-		}
-	}
-}
-
-section.post_show_area {
-	.post_right {
-		.right_content {
-		> p {
+// 文章首頁區域開始
+section.post_index_area {
+	.post_left {
+		> .read_more {
+			margin-bottom: 20px;
 			> a {
 				color: $dim_gray;
 			}
-			> a:hover {
-				color: $basic_pink;
-				}
-			}
-			> em {
-				color: $basic_gray;
-			}
-		}
-		hr {
-			margin: 20px 0;
 		}
 	}
 }
-// 文章 show 區域結束
+
+section.post_index_area {
+	.post_left {
+		.post_image {
+			position: relative;
+  		overflow: hidden;
+			> a {
+				> img {
+					-webkit-transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+        	-moz-transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+        	transition: transform 2s cubic-bezier(0, 0, 0.44, 1.18), -webkit-transform 2s cubic-bezier(0, 0, 0.44, 1.18);
+				}
+			}
+		}
+	}
+	.post_image:hover {
+		> a {
+			> img {
+				-webkit-transform: scale(1.09);
+	      -moz-transform: scale(1.09);
+	      -o-transform: scale(1.09);
+	      -ms-transform: scale(1.09);
+	      transform: scale(1.09);
+			}
+		}
+	}
+	.read_more:hover {
+		> a {
+			color: $basic_pink;
+		}
+	}
+}
+// 文章首頁區域結束

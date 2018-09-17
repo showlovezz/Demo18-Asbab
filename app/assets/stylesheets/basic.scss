@@ -180,3 +180,61 @@ section.breadcrumb {
     }
   }
 }
+
+// 文章區域相關 Css 屬性
+section.post_show_area, section.post_index_area {
+  .post_left {
+    > h2 {
+      margin-bottom: 20px;
+    }
+    > .post_image {
+      margin-bottom: 20px;
+    }
+    > h4 {
+      margin-bottom: 20px;
+      text-transform: capitalize;
+    }
+    > .postmeta {
+      margin-bottom: 20px;
+      > .post_author, .post_date, .post_comment {
+        color: $basic_gray;
+        margin-right: 10px;
+        > i {
+          margin-right: 5px;
+        }
+        > b {
+          color: $dim_gray;
+          text-transform: capitalize;
+        }
+      }
+    }
+    > .post_description {
+      margin-bottom: 20px;
+      color: $basic_gray;
+    }
+  }
+}
+
+section.post_show_area, section.post_index_area {
+  .post_right {
+    > h4 {
+      margin: 20px 0;
+    }
+    .right_content {
+    > p {
+      > a {
+        color: $dim_gray;
+      }
+      > a:hover {
+        color: $basic_pink;
+        }
+      }
+      > em {
+        color: $basic_gray;
+      }
+    }
+    hr {
+      margin: 20px 0;
+    }
+  }
+}

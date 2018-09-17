@@ -62,29 +62,7 @@
 				</div>
 			</div>
 			<div class="col-4 col-md-4 col-xl-4">
-				<div class="post_right">
-					<h4>Recent Blog</h4>
-					<% @posts.each do |post| %>
-						<div class="row">
-							<div class="col-4 col-md-4 col-xl-4">
-								<div class="left_image">
-									<%= link_to post_path(post) do %>
-										<%= image_tag post.image.url, class: "img-fluid" %>
-									<% end %>
-								</div>
-							</div>
-							<div class="col-8 col-md-8 col-xl-8">
-								<div class="right_content">
-									<p>
-										<%= link_to truncate( post.title, length: 30), post_path(post) %>
-									</p>
-									<em><%= verbose_data post.created_at %></em>
-								</div>
-							</div>
-						</div>
-						<hr>
-					<% end %>
-				</div>
+				<%= render partial: "post_list", locals: {post: @posts} %>
 			</div>
 		</div>
 	</div>

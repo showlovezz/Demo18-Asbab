@@ -1,26 +1,23 @@
-<% @posts.each do |post| %>
-	<div class="col-12 col-md-4 col-xl-4 mb_20">
-		<div class="card post_block">
-			<div class="post_image">
-				<%= image_tag post.image.url, class: "card-img-top", alt: "Card image cap" %>
+<div class="post_right">
+	<h4>Recent Blog</h4>
+	<% @posts.each do |post| %>
+		<div class="row">
+			<div class="col-4 col-md-4 col-xl-4">
+				<div class="left_image">
+					<%= link_to post_path(post) do %>
+						<%= image_tag post.image.url, class: "img-fluid" %>
+					<% end %>
+				</div>
 			</div>
-			<div class="card-body">
-				<h5 class="card-title"><%= post.title %></h5>
-				<p class="card-text"><%= truncate(post.description, length: 130) %></p>
-				<p class="read_more">
-					<%= link_to "Read More...", post_path(post) %>
-		    </p>
-			</div>
-			<div class="card-footer rwd_footer_size">
-				<span class="post_author">
-	      	<i class="fa fa-user"></i>By
-	      	<b>Admin</b>
-	      </span>
-	      <span class="post_comment">
-	      	<i class="far fa-comments"></i>
-	      	<b>10 Comments</b>
-	      </span>
+			<div class="col-8 col-md-8 col-xl-8">
+				<div class="right_content">
+					<p>
+						<%= link_to truncate( post.title, length: 30), post_path(post) %>
+					</p>
+					<em><%= verbose_data post.created_at %></em>
+				</div>
 			</div>
 		</div>
-	</div>
-<% end %>
+		<hr>
+	<% end %>
+</div>

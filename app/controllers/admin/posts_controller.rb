@@ -2,7 +2,7 @@ class Admin::PostsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :authenticate_admin
 
-	before_action :find_post, only: [:edit, :update]
+	before_action :find_post, only: [:edit, :update, :destroy]
 
 	def index
 		@posts = Post.all
@@ -34,6 +34,12 @@ class Admin::PostsController < ApplicationController
 			flash.now[:alert] = "文章修改失敗"
 			render :edit
 		end
+	end
+
+	def destroy
+		@post.destroy
+		flash[:alert] = "文章已被刪除"
+		redirect_to admin_posts_path
 	end
 
 	private

@@ -1,0 +1,26 @@
+<% @posts.each do |post| %>
+	<div class="col-12 col-md-4 col-xl-4 mb_20">
+		<div class="card post_block">
+			<div class="post_image">
+				<%= image_tag post.image.url, class: "card-img-top", alt: "Card image cap" %>
+			</div>
+			<div class="card-body">
+				<h5 class="card-title"><%= post.title %></h5>
+				<p class="card-text"><%= truncate(post.description, length: 130) %></p>
+				<p class="read_more">
+					<%= link_to "Read More...", post_path(post) %>
+		    </p>
+			</div>
+			<div class="card-footer rwd_footer_size">
+				<span class="post_author">
+	      	<i class="fa fa-user"></i>By
+	      	<b>Admin</b>
+	      </span>
+	      <span class="post_comment">
+	      	<i class="far fa-comments"></i>
+	      	<b>10 Comments</b>
+	      </span>
+			</div>
+		</div>
+	</div>
+<% end %>

@@ -4,4 +4,7 @@ class Post < ApplicationRecord
 
 	# 資料驗證必輸入
 	validates :title, :description, presence: true
+
+	# 一個文章會有很多評論
+	has_many :comments, dependent: :destroy
 end

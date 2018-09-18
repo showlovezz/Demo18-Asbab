@@ -5,6 +5,9 @@
 			<h6 class="text-muted"><em><%= comment.email %></em></h6>
 		</div>
 		<p><%= comment.content %></p>
-		<p class="text-muted"><em><%= verbose_data(comment.created_at) %> </em></p>
+		<p class="text-muted d-inline-block"><em><%= verbose_data(comment.created_at) %> - </em></p>
+		<% if current_user.admin? %>
+	    <%= link_to "Delete", post_comment_path(@post, comment), method: :delete %>
+	  <% end %>
 	</div>
 <% end %>

@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   root "asbabs#index"
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
-  resources :posts, only: [:index, :show]
+  resources :posts, only: [:index, :show] do
+    resources :comments, only: [:create, :destroy]
+  end
 
   # 後台網址設計
   namespace :admin do

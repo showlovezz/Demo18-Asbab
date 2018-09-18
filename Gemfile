@@ -42,6 +42,8 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'devise', '~> 4.5'
 gem 'carrierwave', '~> 1.2', '>= 1.2.3'
 gem 'hirb', '~> 0.7.3'
+gem 'fog-aws', '~> 3.3'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 # use gems end
 
 group :development, :test do

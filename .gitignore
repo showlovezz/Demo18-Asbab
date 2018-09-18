@@ -38,3 +38,6 @@
 
 # Admin
 /db/seeds.rb
+
+# Ignore application configuration
+/config/application.yml
